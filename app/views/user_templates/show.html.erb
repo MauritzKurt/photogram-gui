@@ -2,11 +2,9 @@
 
 <dl>
   <dt>ID</dt>
-
   <dd><%= @the_user.id %></dd>
 
   <dt>Edit User</dt>
-
   <dd><%= @the_user.id %></dd>
 </dl>
 
@@ -23,11 +21,11 @@
 
   <% @the_user.own_photos.each do |a_photo| %>
     <tr>
-      <td><img src="<%= a_photo.image %>"></td>
+      <td><img src="<%= a_photo.image %> height="300px"></td>
       <td><%= @the_user.username.capitalize %></td>
       <td><%= a_photo.caption %></td>
       <td><%= a_photo.created_at %></td>
-      <td></td>
+      <td><a href="/photos/<%= a_photo.id %>">Show details</a></td>
     </tr>
   <% end %>
 </table>
